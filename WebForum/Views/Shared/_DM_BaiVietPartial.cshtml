@@ -1,0 +1,19 @@
+﻿
+@model  IEnumerable<DanhMucViewModel>
+@using WebForum.Models;
+
+<!-- Danh mục bài viết -->
+<div class="sidebarblock">
+    <h3>Categories</h3>
+    <div class="divline"></div>
+    <div class="blocktxt">
+        <ul class="cats">
+            @foreach (var item in Model)
+            {
+                <li><a href="#">@item.ten <span class="badge pull-right">@item.countbaiviet</span></a></li>
+            }
+
+
+        </ul>
+    </div>
+</div>
